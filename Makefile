@@ -22,9 +22,12 @@ $(EXEC): $(OBJS)
 	@$(CXX) $(CXXFLAGS) -o $@ $(OBJS) $(LIBS)
 	@echo "Build done."
 
-$(BIN_DIR)%.o: $(SRC_DIR)%.cpp
+$(BIN_DIR)%.o: $(SRC_DIR)%.cpp | $(BIN_DIR)
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 	@echo "Compiled "$<" successfully."
+
+$(BIN_DIR):
+	@mkdir -p $(BIN_DIR)
 
 clean:
 	@rm -f $(OBJS) $(EXEC)
