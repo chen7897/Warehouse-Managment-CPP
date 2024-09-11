@@ -1,0 +1,9 @@
+# Ignore the bin directory (object files and executables)
+bin/
+
+# Ignore the .vscode folder (VSCode settings)
+.vscode/
+
+# Optionally ignore temporary or log files
+*.tmp
+*.log
