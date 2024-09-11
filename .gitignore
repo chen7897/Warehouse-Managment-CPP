@@ -1,5 +1,6 @@
-# Ignore the bin directory (object files and executables)
-bin/
+# Ignore the build directory
+*.o
+*.out
 
 # Ignore the .vscode folder (VSCode settings)
 .vscode/
